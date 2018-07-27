@@ -1,10 +1,10 @@
 $(function() {
 	var words = [
-		'un développeur',
-		'un geek',
-		'un codeur',
-		'un caféholic annonyme',
-		'un créatif inspiré'
+		'Intégrateur Web',
+		'un Geek',
+		'en train de coder',
+		'un caféholic',
+		'inspiré'
 	],
 	i = 0;
 
