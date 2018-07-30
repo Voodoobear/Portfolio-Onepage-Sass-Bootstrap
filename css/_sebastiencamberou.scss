@@ -133,6 +133,17 @@ header {
 		}
 	}
 
+	h2.catchphrase {
+		@include font(1.825rem, 300, 1.825, #fff);
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 11rem;
+
+		span {
+			font-weight: 600;
+		}
+	}
+
 	a.down-arrow {
 		display: block;
 		width: 4.125rem;
