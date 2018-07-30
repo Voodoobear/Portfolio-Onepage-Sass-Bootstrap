@@ -242,6 +242,10 @@ header {
 
 		.percent {
 			@include font(5.25rem, 700, 5.25rem, #ccc);
+
+			.colorNumber {
+				color: #ff2222;
+			}
 		}
 
 		.progress-container {
