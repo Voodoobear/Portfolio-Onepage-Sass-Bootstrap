@@ -1,11 +1,14 @@
 // Main style
+@import 'mixins';
+@import 'hover';
+@import 'lightbox';
 
 body {
 	font-family: 'Open Sans', sans serif;
 	background-color: #f3f3f3;
 }
 
-section {
+section, footer {
 	padding-top: 6.25rem;
 	padding-bottom: 6.25rem;
 
@@ -56,10 +59,10 @@ header {
   width: 100%;
   height: 40.625rem;
   padding-top: 3.125rem;
-  background-image: url('../img/site/trame.png'), url('../img/site/header.jpg');
+  background-image: url('../img/site/trame.png'), url('../img/site/header2.jpg');
   background-position: center;
   background-repeat: repeat, no-repeat;
-  background-size: cover;
+  background-size: auto, cover;
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url('../img/site/header.jpg');
@@ -123,10 +126,10 @@ header {
 		@include font(3.125rem, 300, 3.125, #fff);
 		text-transform: uppercase;
 		text-align: center;
-		margin-top: 9rem; 
-	
+		margin-top: 9rem;
+
 		span {
-			font-weight: 600; 
+			font-weight: 600;
 		}
 	}
 
@@ -149,7 +152,7 @@ header {
 		}
 
 		to {
-			opacity: 0.2; 
+			opacity: 0.2;
 			margin-top: 2rem;
 		}
 	}
@@ -160,7 +163,7 @@ header {
 .about {
 	h2 {
 		@include font(2.1875rem, 800, 2.1875rem, #282828);
-		text-align: center; 
+		text-align: center;
 	}
 
 	h3 {
@@ -187,17 +190,19 @@ header {
 
 	img.picture {
 		float: right;
+		border-radius: 40%;
 	}
 
 	.social-networks {
 		text-align: center;
-		
+
 		a {
 			+ a {
 				margin-left: .3125rem;
 			}
 			img {
-				width: 2.1875rem;
+				width: 3.1875rem;
+				margin-left: 1.5rem;
 			}
 		}
 	}
@@ -210,7 +215,7 @@ header {
 
 	h2 {
 		@include font(2.1875rem, 800, 2.1875rem, #f3f3f3);
-		text-align: center; 
+		text-align: center;
 	}
 
 	p {
@@ -225,7 +230,7 @@ header {
 		margin-top: 1.5625rem;
 
 		.percent {
-			@include font(6.25rem, 700, 6.25rem, #ccc);
+			@include font(5.25rem, 700, 5.25rem, #ccc);
 		}
 
 		.progress-container {
@@ -233,7 +238,8 @@ header {
 			padding-left: 2rem;
 
 			strong {
-				@include font(1.25rem, 700, 1.25rem, #f3f3f3);
+				@include font(1.5rem, 700, 1.5rem, #f3f3f3);
+				margin-left: 1rem;
 			}
 
 			.progress {
@@ -289,6 +295,7 @@ header {
 			&::before {
 				content: url('../img/site/puce.svg');
 				padding-left: .625rem;
+				margin-right: 8px;
 			}
 		}
 
@@ -318,6 +325,20 @@ header {
 		@include font(1.5625rem, 400, 1.5625rem, #282828);
 		text-align: center;
 		margin-bottom: 5.25rem;
+	}
+
+	.external {
+		text-align: center;
+		border: 1px solid black;
+		border-radius: 0 0 5px 5px;
+		background-color: #282828;
+
+		a {
+			text-decoration: none;
+			color: #F00;
+			font-size: 1.2rem;
+			font-weight: 600;
+		}
 	}
 
 	figure {
@@ -368,27 +389,49 @@ header {
 	}
 }
 
-// Footer 
+// Footer
 
-footer {
+.networks {
+	h2 {
+		@include font(2.1875rem, 800, 2.1875rem, #282828);
+		text-align: center;
+	}
+
+
 	p {
 		@include font(1.125rem, 400, 1.125rem, #666);
 		text-align: center;
 		margin-top: 4.375rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: .125rem;
 	}
 
-	ul {
-		text-align: center;
-		margin-bottom: 4.375rem;
+	.social {
+		font-size: 3.5rem;
 
-		li {
-			display: inline;
-			@include font(1.125rem, 00, 1.125rem, #282828);
+		a {
+			margin: 0 2rem 0 2rem;
+		}
 
-			a {
-				color: inherit;
+		.fa-facebook,
+		.fa-twitter,
+		.fa-google-plus,
+		.fa-linkedin,
+		.fa-youtube,
+		.fa-github,
+		.fa-codepen {
+			color: #ff4848;
+
+			&:hover {
+				color: #a0a0a0;
 			}
 		}
 	}
+}
+
+footer {
+		background-color: #282828;
+		color: #fff;
+		text-align: center;
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
 }
