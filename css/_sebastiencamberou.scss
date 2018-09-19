@@ -197,11 +197,16 @@ header {
 			color: #ff4800;
 			text-decoration: underline;
 		}
+
+		li {
+			line-height: 2rem;
+		}
 	}
 
 	img.picture {
 		float: right;
 		border-radius: 40%;
+		margin: 25px 0 0 50px;
 	}
 
 	.social-networks {
@@ -238,7 +243,7 @@ header {
 	.flex {
 		display: flex;
 		align-items: center;
-		margin-top: 1.5625rem;
+		margin-top: 2.4rem;
 
 		.percent {
 			@include font(5.25rem, 700, 5.25rem, #ccc);
@@ -265,6 +270,10 @@ header {
 					height: 1.25rem;
 					background-color: #ff2222;
 				}
+				.learning {
+					height: 1.25rem;
+					background-color: rgb(0, 225, 255);
+				}
 			}
 		}
 	}
@@ -273,9 +282,8 @@ header {
 // Experiences
 
 .experience {
-		background: linear-gradient(
- rgba(0, 0, 0, 0.45), 
- rgba(0, 0, 0, 0.45) ), url('http://techmoka.com/wp-content/uploads/2018/02/web-3.jpg');
+		background: linear-gradient( rgba(0, 0, 0, 0.80),  rgba(0, 0, 0, 0.80) ), url('https://web-tool-box.com/ownprojects/img/site/new-web.jpg');
+		background-size: cover;
 		background-attachment: fixed;
 
 	h2 {
@@ -409,7 +417,31 @@ header {
 	}
 }
 
-// Footer
+//Hobbies
+
+.hobbies {
+	background: #282828;
+
+	h2 {
+		@include font(2.1875rem, 800, 2.1875rem, #f3f3f3);
+		text-align: center;
+	}
+
+	.hobbiesIcons {
+		border: 1px solid #ff4848;
+		border-radius: 5px;
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+		text-align: center;
+		background-color: #A9A9A9;
+
+		img {
+			width: 8%;
+		}
+	}
+}
+
+//Networks
 
 .networks {
 	text-align: center;
@@ -449,28 +481,7 @@ header {
 	}
 }
 
-.hobbies {
-	background-color: #282828;
-
-	h2 {
-		@include font(2.1875rem, 800, 2.1875rem, #f3f3f3);
-		text-align: center;
-	}
-
-	.hobbiesIcons {
-		border: 1px solid #ff4848;
-		border-radius: 5px;
-		padding-top: 2.5rem;
-		padding-bottom: 2.5rem;
-		text-align: center;
-		background-color: #A9A9A9;
-
-		img {
-			width: 8%;
-		}
-	}
-}
-
+// Footer
 
 footer {
 		background-color: #282828;
@@ -480,22 +491,7 @@ footer {
 		padding-bottom: 1rem;
 }
 
-
-.loader {
-  color: #d80000;
-  font-size: 10px;
-  margin: 10px 90px 55px 55px;
-  width: .5em;
-  height: .5em;
-  border-radius: 50%;
-  position: relative;
-  text-indent: -9999em;
-  -webkit-animation: load4 1.3s infinite linear;
-  animation: load4 1.3s infinite linear;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-}
+// Animations
 @-webkit-keyframes load4 {
   0%,
   100% {
