@@ -30,10 +30,17 @@ $(function() {
 
 	// display of the progress bars (skill)
 	window .sr = ScrollReveal();
-	sr.reveal('.progress-bar', {
+	sr.reveal('.progress-bar, .learning', {
 		origin: 'left',
 		duration: 2000,
 		distance: '100%'
 	});
+
+	const parallax = document.getElementById("parallax");
+
+	window.addEventListener("scroll", function() {
+  		let offset = window.pageYOffset;
+  	parallax.style.backgroundPositionY = offset * 0.9 + "px";
+})
 });
 
