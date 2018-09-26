@@ -387,13 +387,14 @@ header {
 			right: .5rem;
 			bottom: .5rem;
 			left: .5rem;
-			background-color: #ff4848;
+			background-color: #d81414;
 			opacity: 0;
+			border-radius: 5px;
 			padding-top: 3.9375rem;
 			transition: opacity .6s ease;
 
 			&:hover {
-				opacity: .6;
+				opacity: .70;
 			}
 
 			h3,
@@ -437,13 +438,16 @@ header {
 	}
 
 	.hobbiesBlock {
-		border: 1px solid #ff4848;
-		border-radius: 5px;
+		color: #fff;
+		background: #8d8d8d;
 		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
-		margin: 1.2rem 0 1.2rem 0;
+		padding-bottom: 2.5rem;
+		margin: 50px 0 25px 0;
 		text-align: center;
-		background-color: #A9A9A9;
+		border-left: 4px solid red;
+		border-right: 4px solid red;
+		box-shadow: 2px 3px 3px #000;
+		border-radius: 2px;
 
 		hr {
 			width: 3rem;
