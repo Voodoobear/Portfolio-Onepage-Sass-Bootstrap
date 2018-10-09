@@ -15,7 +15,7 @@ $(function() {
 		$(".navbar-responsive").toggle("slow");
 	});
 
-	// handdeling the Catch Phrase from the header (4.5s)
+	// handdeling the Catch Phrase from the header (3.5s)
 	setInterval(function () {
 		$("#word").fadeOut(function() {
 			$(this).html(words[i = (i + 1) % words.length]).fadeIn();
@@ -41,6 +41,20 @@ $(function() {
 	window.addEventListener("scroll", function() {
   		let offset = window.pageYOffset;
   	parallax.style.backgroundPositionY = offset * 0.9 + "px";
-})
+	});
+
+	const pressed = [];
+	const secretCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+	
+	window.addEventListener('keyup', (e) => {
+	  console.log(e.key);
+	  pressed.push(e.key);
+	  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+	  if (pressed.join(",").includes(secretCode)) {
+		console.log("The KONAMI has you!");
+		$("p,h1,h2,h3,h4,h5,h6,small,li,span,strong,a").text("HIRE ME!");
+	  }
+	  console.log(pressed);
+	});
 });
 
