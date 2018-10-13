@@ -443,8 +443,8 @@ header {
 	}
 
 	.hobbiesBlock {
-		color: #fff;
-		background: #8d8d8d;
+		color: #000;
+		background: #e4e3e3;
 		padding-top: 1.5rem;
 		padding-bottom: 2.5rem;
 		margin: 50px 0 25px 0;
@@ -595,5 +595,8 @@ footer {
     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
 }
-
+@keyframes bounce{
+	from {transform: translateY(0);}
+	to   {transform: translateY(-20px);}
+}
 
