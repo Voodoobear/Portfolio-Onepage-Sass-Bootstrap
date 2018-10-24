@@ -569,9 +569,14 @@ footer {
 }
 
 #contact p {
-	color: #fff;
+	@include font(1.25rem, 400, 1.25rem, #fff);
 	text-align: center;
-	padding: 15px 0 15px 0;
+	margin-bottom: 2.25rem;
+}
+
+#contact label 
+{
+	font-weight: bold;
 }
 
 /*---  NEW  ------*/
@@ -602,6 +607,27 @@ footer {
     margin-top: 15px;
     font-weight: bold;
     font-size: 22px;
+}
+
+
+.buttonContact 
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 18px 50px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in 0s;
+    background: transparent;
+}
+
+.buttonContact:hover {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
 }
 
 // Animations
