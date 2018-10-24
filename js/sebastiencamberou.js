@@ -53,8 +53,8 @@ $(function() {
 	  if (pressed.join(",").includes(secretCode)) {
 		console.log("The KONAMI has you!");
 		$("p,h1,h2,h3,h4,h5,h6,small,li,span,strong,a").text("HIRE ME!");
+		$(".hobbiesBlock img").animate("animation: bounce 0.35s ease infinite alternate")
 	  }
 	  console.log(pressed);
 	});
-});
-
+}); 
