@@ -540,6 +540,70 @@ footer {
 	}
 }
 
+/*----- Contact ----- +++ A réviser avec SASS +++ */
+
+#contact {
+    background: linear-gradient( rgba(0, 0, 0, 0.80),  rgba(0, 0, 0, 0.80) ), url('../img/site/contactimage.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+}
+
+#contact-form
+{
+    font-size: 20px;
+    color: #fff;
+}
+
+#contact-form strong
+{
+    font-size: 20px;
+    color: #fff;
+}
+
+#contact h2
+{
+    text-transform: uppercase;
+    font-weight:bold;
+	color: #fff;
+	text-align: center;
+}
+
+#contact p {
+	color: #fff;
+	text-align: center;
+	padding: 15px 0 15px 0;
+}
+
+/*---  NEW  ------*/
+.white-stars
+{
+    color: #fff;
+}
+.form-control
+{
+    height: 50px;
+    font-size: 18px;
+}
+#contact-form input[type=submit]
+{
+    margin: 40px auto 0px;
+    display: block;
+}
+.comments
+{
+    font-style: italic;
+    font-size: 18px;
+    color: #fff;
+    height: 25px
+}
+#contact-form .thank-you
+{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
 // Animations
 @-webkit-keyframes load4 {
   0%,
