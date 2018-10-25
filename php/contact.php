@@ -15,7 +15,7 @@
         
         if (empty($array["firstname"]))
         {
-            $array["firstnameError"] = "Je veux connaitre ton prénom !";
+            $array["firstnameError"] = "Il vous faut renseigner votre prénom !";
             $array["isSuccess"] = false; 
         } 
         else
@@ -25,7 +25,7 @@
 
         if (empty($array["name"]))
         {
-            $array["nameError"] = "Et oui je veux tout savoir. Même ton nom !";
+            $array["nameError"] = "Il vous faut aussi renseigner votre nom !";
             $array["isSuccess"] = false; 
         } 
         else
@@ -35,7 +35,7 @@
 
         if(!isEmail($array["email"])) 
         {
-            $array["emailError"] = "T'essaies de me rouler ? C'est pas un email ça  !";
+            $array["emailError"] = "Il vous faut aussi, bien sur, renseigner votre email !";
             $array["isSuccess"] = false; 
         } 
         else
@@ -45,17 +45,18 @@
 
         if (!isPhone($array["phone"]))
         {
-            $array["phoneError"] = "Que des chiffres et des espaces, stp...";
+            $array["phoneError"] = "Bien ! Mais uniquement des chiffres et des espaces svp !";
             $array["isSuccess"] = false; 
         }
         else
         {
             $emailText .= "Phone: {$array['phone']}\n";
+            $array["phoneError"] = "Vous avez oubl... ah non, il n'est pas obligatoire lui !";
         }
 
         if (empty($array["message"]))
         {
-            $array["messageError"] = "Qu'est-ce que tu veux me dire ?";
+            $array["messageError"] = "Auriez vous oublié le plus important : le message ?";
             $array["isSuccess"] = false; 
         }
         else
@@ -66,7 +67,7 @@
         if($array["isSuccess"]) 
         {
             $headers = "From: {$array['firstname']} {$array['name']} <{$array['email']}>\r\nReply-To: {$array['email']}";
-            mail($emailTo, "Un message de votre site", $emailText, $headers);
+            mail($emailTo, "Messasge depuis le protfolio Onepage Sébastien Camberou", $emailText, $headers);
         }
         
         echo json_encode($array);

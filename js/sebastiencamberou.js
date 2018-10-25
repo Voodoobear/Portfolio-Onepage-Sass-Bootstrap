@@ -52,9 +52,40 @@ $(function() {
 	  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
 	  if (pressed.join(",").includes(secretCode)) {
 		console.log("The KONAMI has you!");
-		$("p,h1,h2,h3,h4,h5,h6,small,li,span,strong,a").text("HIRE ME!");
+		$("p,h1,h2,h3,h4,h5,h6,small,li,span,strong,a,.buttonContact").text("HIRE ME!");
 		$(".hobbiesBlock img").animate("animation: bounce 0.35s ease infinite alternate")
 	  }
 	  console.log(pressed);
 	});
-}); 
+
+	/*Gestion AJAX du traitement de l'email*/
+	
+		$('#contact-form').submit(function(e) {
+			e.preventDefault();
+			$('.comments').empty();
+			var postdata = $('#contact-form').serialize();
+			
+			$.ajax({
+				type: 'POST',
+				url: 'php/contact.php',
+				data: postdata,
+				dataType: 'json',
+				success: function(json) {
+					 
+					if(json.isSuccess) 
+					{
+						$('p.white-stars').append("<p class='thank-you'>Votre message a bien été envoyé.</p>");
+						$('#contact-form')[0].reset();
+					}
+					else
+					{
+						$('#firstname + .comments').html(json.firstnameError);
+						$('#name + .comments').html(json.nameError);
+						$('#email + .comments').html(json.emailError);
+						$('#phone + .comments').html(json.phoneError);
+						$('#message + .comments').html(json.messageError);
+					}                
+				}
+			});
+		});	
+	})
